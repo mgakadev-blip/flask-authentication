@@ -73,6 +73,7 @@ def register():
         elif password1 != password2:
             flash('Password don\'t match!', category='danger')
         else:
+            new_user = User(username=username)
             new_user.set_password(password1)
             db.session.add(new_user)
             db.session.commit()
