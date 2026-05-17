@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block content %}
+
+<form method="POST">
+  {% include "alert.html" %}
+  <label for="">Username</label>
+  <input type="text" name="userName" placeholder="Username" required /> <br />
+  <label for="">Password</label>
+  <input type="password" name="password1" placeholder="Password" required />
+  <br />
+  <label for="">Password</label>
+  <input type="password" name="password2" placeholder="Password" required />
+  <br />
+  <a href="/">Already have an Account?</a> <br />
+  <button>Register</button>
+</form>
+
+{% endblock %}
